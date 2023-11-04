@@ -14,11 +14,7 @@ const Todolist = () => {
 
   useEffect(() => {
     let timeoutId;
-    if(search ){
-      timeoutId = setTimeout(() => {getTodos()}, 2000);
-    }else{
-      getTodos();
-    }
+    timeoutId = setTimeout(() => {getTodos()}, 2000);
     return () => { clearTimeout(timeoutId) }
   }, [search])
 
